@@ -4,6 +4,8 @@ import json, codecs
 client = MongoClient('localhost', 3001)
 db = client.meteor
 prog = db.bandas
+##################CRIAR COLECAO, SE NAO EXISTER
+#db.create_collection("bandas2")
 bandas2 = db.bandas2
 #bandas2.remove({})
 print bandas2.find_one()
@@ -21,11 +23,6 @@ with codecs.open('tudo.json', encoding='utf-8-sig') as data_file:
                 tagLegal = {'tag':tag,'value':float(dados[data][banda][tag])}
                 bandaLegal['tags'].append(tagLegal)
             jsonLegal['bandas'].append(bandaLegal)
-            #print jsonLegal
+        ############################################## PARA INSERIR DESCOMENTAR ESSA LINHA
         #bandas2.insert_one(jsonLegal)
-        #all.append(jsonLegal)
 
-    print all
-
-#    tudoJson = codecs.open('all.json', "w", encoding='utf-8-sig')
-#    json.dump(all,tudoJson, encoding='utf-8-sig', ensure_ascii=False)
