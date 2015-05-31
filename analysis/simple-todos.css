@@ -1,9 +1,21 @@
 /* CSS declarations go here */
+
+.top-div {
+  margin-top: 20px;
+}
+
+.band-list {
+  margin-left: 10%;
+}
+
+.band-title {
+  margin-left: 3%;
+}
+
 body {
   font-family: sans-serif;
-  background-color: #315481;
-  background-image: linear-gradient(to bottom, #315481, #918e82 100%);
   background-attachment: fixed;
+  background:url("http://cr.i.uol.com.br/brindes/papeis/festajunina_1024x768.jpg");
 
   position: absolute;
   top: 0;
@@ -21,7 +33,6 @@ body {
   max-width: 600px;
   margin: 0 auto;
   min-height: 100%;
-  background: white;
 }
 
 header {
@@ -66,7 +77,6 @@ form {
 ul {
   margin: 0;
   padding: 0;
-  background: white;
 }
 
 .delete {
