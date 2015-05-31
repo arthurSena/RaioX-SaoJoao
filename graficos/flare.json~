@@ -1,8 +1,10 @@
-
-   [
-      {"name": "AgglomerativeCluster", "size": 3938},
-      {"name": "CommunityStructure", "size": 3812},
-      {"name": "HierarchicalCluster", "size": 6714},
-      {"name": "MergeEdge", "size": 743}
+{
+ "name": "flare",
+ "children": 
+  [
+      {"name": "brega", "size": 0.2},
+      {"name": "pé-de-serra", "size": 0.01},
+      {"name": "eletrônico", "size": 0.5},
+      {"name": "bond edobrasil", "size": 0.29}
    ]
-
+}

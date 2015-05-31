@@ -11,7 +11,7 @@ text {
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
-var diameter = 960,
+var diameter = 100,
     format = d3.format(",d"),
     color = d3.scale.category20c();
 
@@ -38,7 +38,7 @@ d3.json("flare.json", function(error, root) {
 
   node.append("circle")
       .attr("r", function(d) { return d.r; })
-      .style("fill", function(d) { return color(d.packageName); });
+      .style("fill", function(d) { return color(d.className); });
 
   node.append("text")
       .attr("dy", ".3em")
