@@ -1,7 +1,7 @@
 __author__ = 'andryw'
 import codecs
 
-programacao = codecs.open('tudo.csv', encoding='utf-8')
+programacao = codecs.open('tudo.csv', encoding='utf-8-sig')
 
 documentos = {}
 
@@ -22,7 +22,6 @@ for line in programacao.readlines():
             documentos[data][banda] = {}
         if (tag != 'NA'):
             documentos[data][banda][tag] = value
-tudoJson = codecs.open('tudo.json', encoding='utf-8')
+tudoJson = codecs.open('tudo.json', "w", encoding='utf-8-sig')
 
-
-json.dump(documentos,tudoJson, encoding='utf-8', ensure_ascii=False)
+json.dump(documentos,tudoJson, encoding='utf-8-sig', ensure_ascii=False)
