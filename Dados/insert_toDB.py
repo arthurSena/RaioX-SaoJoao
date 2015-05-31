@@ -1,11 +1,16 @@
 from pymongo import MongoClient
 import json, codecs
 
-client = MongoClient('localhost', 3001)
-db = client.meteor
+
+#var d = new MongoInternals.RemoteCollectionDriver("mongodb://andryw:4n4lytics@ds033607.mongolab.com:33607/raiox-sj");
+#Bandas = new Mongo.Collection("banda_tag", { _driver: d });
+uri = "mongodb://andryw:4n4lytics@ds033607.mongolab.com:33607/raiox-sj"
+client = MongoClient(uri)
+#client = MongoClient('ds033607.mongolab.com', 33607)
+db = client['raiox-sj']
 prog = db.bandas
 ##################CRIAR COLECAO, SE NAO EXISTER
-#db.create_collection("bandas2")
+db.create_collection("bandas2")
 bandas2 = db.bandas2
 #bandas2.remove({})
 print bandas2.find_one()
@@ -24,5 +29,5 @@ with codecs.open('tudo.json', encoding='utf-8-sig') as data_file:
                 bandaLegal['tags'].append(tagLegal)
             jsonLegal['bandas'].append(bandaLegal)
         ############################################## PARA INSERIR DESCOMENTAR ESSA LINHA
-        #bandas2.insert_one(jsonLegal)
+        bandas2.insert_one(jsonLegal)
 
