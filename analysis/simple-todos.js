@@ -1,6 +1,9 @@
-Programacao = new Mongo.Collection("bandas2");
+//Programacao = new Mongo.Collection("bandas2");
 
 if (Meteor.isClient) {
+
+    Meteor.subscribe('bandas2');
+    Programacao = new Mongo.Collection('bandas2');
   // This code only runs on the client
   Template.body.helpers({
     tasks: function () {
@@ -33,6 +36,20 @@ if (Meteor.isClient) {
            console.log("oi");
         }
 
+
+    });
+
+}
+
+
+if (Meteor.isServer) {
+    Meteor.startup(function () {
+        var d = new MongoInternals.RemoteCollectionDriver("mongodb://andryw:4n4lytics@ds033607.mongolab.com:33607/raiox-sj");
+        Tags = new Mongo.Collection('bandas2', { _driver: d });
+
+        Meteor.publish('bandas2', function(){
+            return Tags.find();
+        });
 
     });
 
