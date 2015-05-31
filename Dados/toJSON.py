@@ -7,21 +7,27 @@ documentos = {}
 
 import json
 
+i = 0
 for line in programacao.readlines():
+
     if line:
+        i = i + 1
+
+        if i == 1:
+            continue
         temp = line.replace("\n","").split(",")
         data = temp[0]
         banda = temp[1]
-        print banda
         tag = temp[2]
         value = temp[3]
 
         if (not documentos.has_key(data)):
-            documentos[data] = {'data':data,'bandas':{}}
-        if (not documentos[data]['bandas'].has_key(banda)):
+            documentos[data] = {}
+        if (not documentos[data].has_key(banda)):
             documentos[data][banda] = {}
         if (tag != 'NA'):
             documentos[data][banda][tag] = value
-tudoJson = codecs.open('tudo.json', "w", encoding='utf-8-sig')
+tudoJson = codecs.open('tudo.json', "w",encoding='utf-8-sig')
 
-json.dump(documentos,tudoJson, encoding='utf-8-sig', ensure_ascii=False)
+
+json.dump(documentos,tudoJson, encoding='utf-8-sig')
