@@ -1,113 +1,113 @@
-data,variable,value
-05/06/15,banda1,Biliu de Campina
-05/06/15,banda2,Jairo Madruga
-05/06/15,banda3,Jorge de Altinho
-05/06/15,banda4,Os Três do Nordeste
-05/06/15,banda5,Luan e Forró Estilizado
-06/06/15,banda1,Erika Marques
-06/06/15,banda2,Ton Oliveira
-06/06/15,banda3,Flávio José
-06/06/15,banda4,Forró da Curtição
-07/06/15,banda1,CulédeXá
-07/06/15,banda2,Felipe Lemos
-07/06/15,banda3,Gabriel Diniz
-07/06/15,banda4,Banda Palov
-09/06/15,banda1,Eloisa Olinto
-09/06/15,banda2,Sandra Belê
-09/06/15,banda3,Janine e Banda
-10/06/15,banda1,Forró da Galera-Karkará
-10/06/15,banda2,Galã pense numa farrá
-10/06/15,banda3,Ramon Schinayder
-11/06/15,banda1,Jurandir da Feira
-11/06/15,banda2,Assisão
-11/06/15,banda3,Banda Encantus
-12/06/15,banda1,Geovane Júnior
-12/06/15,banda2,Os Nonatos
-12/06/15,banda3,AlexandreTan-Forró dos Namorados
-12/06/15,banda4,Forró do Bom
-13/06/15,banda1,Os 3 do nordeste
-13/06/15,banda2,Capilé
-13/06/15,banda3,Coronel Grilo
-13/06/15,banda4,Forró Bakana
-13/06/15,banda5,João Marcelo e Juliano
-14/06/15,banda1,Edgley Miguel
-14/06/15,banda2,Magníficos
-14/06/15,banda3,Dorgival Dantas
-14/06/15,banda4,Diogo Cirne
-16/06/15,banda1,Impacto X
-16/06/15,banda2,Coco Seco
-16/06/15,banda3,Forró Instigação
-17/06/15,banda1,Forró da Galera
-17/06/15,banda2,Afrodite
-17/06/15,banda3,Fabiano Guimarães
-17/06/15,banda4,Aviões do Forró
-18/06/15,banda1,Cicinho Lima
-18/06/15,banda2,Raniere Gomes
-18/06/15,banda3,Bonde do Brasil
-18/06/15,banda4,Dannys Paraíba
-19/06/15,banda1,Poeta Francinaldo
-19/06/15,banda2,Forró do Imperador
-19/06/15,banda3,Amazan
-19/06/15,banda4,Nando Cordel
-20/06/15,banda1,Alceu Valença
-20/06/15,banda2,Pinto do Acordeon
-20/06/15,banda3,Genival Lacerda
-20/06/15,banda4,Eliane
-20/06/15,banda5,Saia Justa
-21/06/15,banda1,Forró da Barka
-21/06/15,banda2,Maciel Melo
-21/06/15,banda3,Joverlaine e Mania de Sertanejo
-21/06/15,banda4,Novinho da Paraíba
-22/06/15,banda1,Tribo Cordel
-22/06/15,banda2,Beto Brito
-22/06/15,banda3,Orquestra Sanfônica Balaio Nordeste
-22/06/15,banda4,Luisinho Cartaxo
-23/06/15,banda1,Antônio Barros e Cecéu
-23/06/15,banda2,Tony Dumond
-23/06/15,banda3,Capilé
-23/06/15,banda4,Elba Ramalho
-24/06/15,banda1,Chico Sales
-24/06/15,banda2,Bibliu de Campina
-24/06/15,banda3,Zé Ramalho
-24/06/15,banda4,Mara Pavanelly
-25/06/15,banda1,Zé Calixto
-25/06/15,banda2,Banda Magia
-25/06/15,banda3,Os Gonzagas
-25/06/15,banda4,Netinho Lima
-26/06/15,banda1,Lucy Alves
-26/06/15,banda2,Edmar Miguel
-26/06/15,banda3,Esporada Ouro
-26/06/15,banda4,Marcos Freire e Banda
-27/06/15,banda1,Cezinha
-27/06/15,banda2,Cavalo de Pau
-27/06/15,banda3,Shilton Fernandes
-27/06/15,banda4,João Lima
-27/06/15,banda5,Renata Arruda
-28/06/15,banda1,Solteirões do Forró
-28/06/15,banda2,Niedson Lua
-28/06/15,banda3,Forró Sacaneado
-29/06/15,banda1,Gatinha Manhosa
-29/06/15,banda2,Forrozão das Antigas
-29/06/15,banda3,Gente Boa
-29/06/15,banda4,Forró Quente
-30/06/15,banda1,Padre Fábio de Melo
-30/06/15,banda2,ProjetoAcreditar-CAE Helena Holanda
-01/07/15,banda1,Forró da Galera
-01/07/15,banda2,Matheus Felipe e Forró Ousado
-01/07/15,banda3,Forró do Eskulaxo
-01/07/15,banda4,Desejo de Menina
-02/07/15,banda1,Vatese Viola
-02/07/15,banda2,Cabruêra
-02/07/15,banda3,Candeeiro Natural
-03/07/15,banda1,Inaudete Amorim
-03/07/15,banda2,Geraldinho Lins
-03/07/15,banda3,Edra Veras
-03/07/15,banda4,Coleguinhas
-04/07/15,banda1,Coroné Grilo
-04/07/15,banda2,Waldonys
-04/07/15,banda3,Forró Zueira
-04/07/15,banda4,Saia Rodada
-05/07/15,banda1,Garota Safada
-05/07/15,banda2,Banda Forró do Gordinho
-05/07/15,banda3,Forró na Manha
-05/07/15,banda4,Raiane Stthefanny
+data,banda
+05/06/15,Biliu de Campina
+05/06/15,Jairo Madruga
+05/06/15,Jorge de Altinho
+05/06/15,Os Três do Nordeste
+05/06/15,Luan e Forró Estilizado
+06/06/15,Erika Marques
+06/06/15,Ton Oliveira
+06/06/15,Flávio José
+06/06/15,Forró da Curtição
+07/06/15,CulédeXá
+07/06/15,Felipe Lemos
+07/06/15,Gabriel Diniz
+07/06/15,Banda Palov
+09/06/15,Eloisa Olinto
+09/06/15,Sandra Belê
+09/06/15,Janine e Banda
+10/06/15,Forrozão Karkará
+10/06/15,Galã do Brega
+10/06/15,Ramon Schinayder
+11/06/15,Jurandir da Feira
+11/06/15,Assisão
+11/06/15,Banda Encantus
+12/06/15,Geovane Júnior
+12/06/15,Os Nonatos
+12/06/15,AlexandreTan-Forró dos Namorados
+12/06/15,Forró do Bom
+13/06/15,Os 3 do nordeste
+13/06/15,Capilé
+13/06/15,Coronel Grilo
+13/06/15,Forró Bakana
+13/06/15,João Marcelo e Juliano
+14/06/15,Edgley Miguel
+14/06/15,Magníficos
+14/06/15,Dorgival Dantas
+14/06/15,Diogo Cirne
+16/06/15,Impacto X
+16/06/15,Coco Seco
+16/06/15,Forró Instigação
+17/06/15,Forró da Galera
+17/06/15,Afrodite
+17/06/15,Fabiano Guimarães
+17/06/15,Aviões do Forró
+18/06/15,Cicinho Lima
+18/06/15,Raniere Gomes
+18/06/15,Bonde do Brasil
+18/06/15,Dannys Paraíba
+19/06/15,Poeta Francinaldo
+19/06/15,Forró do Imperador
+19/06/15,Amazan
+19/06/15,Nando Cordel
+20/06/15,Alceu Valença
+20/06/15,Pinto do Acordeon
+20/06/15,Genival Lacerda
+20/06/15,Eliane
+20/06/15,Saia Justa
+21/06/15,Forró da Barka
+21/06/15,Maciel Melo
+21/06/15,Joverlaine e Mania de Sertanejo
+21/06/15,Novinho da Paraíba
+22/06/15,Tribo Cordel
+22/06/15,Beto Brito
+22/06/15,Orquestra Sanfônica Balaio Nordeste
+22/06/15,Luisinho Cartaxo
+23/06/15,Antônio Barros e Cecéu
+23/06/15,Tony Dumond
+23/06/15,Capilé
+23/06/15,Elba Ramalho
+24/06/15,Chico Sales
+24/06/15,Bibliu de Campina
+24/06/15,Zé Ramalho
+24/06/15,Mara Pavanelly
+25/06/15,Zé Calixto
+25/06/15,Banda Magia
+25/06/15,Os Gonzagas
+25/06/15,Netinho Lima
+26/06/15,Lucy Alves
+26/06/15,Edmar Miguel
+26/06/15,Esporada Ouro
+26/06/15,Marcos Freire e Banda
+27/06/15,Cezinha
+27/06/15,Cavalo de Pau
+27/06/15,Shilton Fernandes
+27/06/15,João Lima
+27/06/15,Renata Arruda
+28/06/15,Solteirões do Forró
+28/06/15,Niedson Lua
+28/06/15,Forró Sacaneado
+29/06/15,Gatinha Manhosa
+29/06/15,Forrozão das Antigas
+29/06/15,Gente Boa
+29/06/15,Forró Quente
+30/06/15,Padre Fábio de Melo
+30/06/15,ProjetoAcreditar-CAE Helena Holanda
+01/07/15,Forró da Galera
+01/07/15,Matheus Felipe e Forró Ousado
+01/07/15,Forró do Eskulaxo
+01/07/15,Desejo de Menina
+02/07/15,Vatese Viola
+02/07/15,Cabruêra
+02/07/15,Candeeiro Natural
+03/07/15,Inaudete Amorim
+03/07/15,Geraldinho Lins
+03/07/15,Edra Veras
+03/07/15,Coleguinhas
+04/07/15,Coroné Grilo
+04/07/15,Waldonys
+04/07/15,Forró Zueira
+04/07/15,Saia Rodada
+05/07/15,Garota Safada
+05/07/15,Banda Forró do Gordinho
+05/07/15,Forró na Manha
+05/07/15,Raiane Stthefanny

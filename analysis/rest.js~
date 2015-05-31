@@ -1,0 +1,22 @@
+Programacao = new Mongo.Collection("programacao");
+
+if (Meteor.isServer) {
+
+  Restivus.addCollection(Programacao);
+ 
+  // Maps to: /api/posts/:id
+  Restivus.addRoute('raiox/:data', {
+    get: function () {
+	console.write('oi');
+      var post = Programacao.findOne(this.urlParams.data);
+      if (post) {
+	console.write(post);	
+        return {status: 'success', data: post};
+      }
+      return {
+        statusCode: 404,
+        body: {status: 'fail', message: 'Post not found'}
+      };
+    }
+  });
+}
