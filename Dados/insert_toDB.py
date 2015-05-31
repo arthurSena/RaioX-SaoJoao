@@ -37,5 +37,5 @@ with codecs.open('tudo.json', encoding='utf-8-sig') as data_file:
                 bandaLegal['tags'].append(tagLegal)
             jsonLegal['bandas'].append(bandaLegal)
         ############################################## PARA INSERIR DESCOMENTAR ESSA LINHA
-        #bandas2.insert_one(jsonLegal)
+        #   bandas2.insert_one(jsonLegal)
 

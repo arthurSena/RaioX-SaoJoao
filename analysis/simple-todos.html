@@ -8,20 +8,38 @@
       <h1>Todo List</h1>
     </header>
 
+    <div class="row">
     <ul>
       {{#each tasks}}
         {{> task}}
       {{/each}}
     </ul>
+    </div>
+  </div>
+
+  <div>
+
   </div>
 </body>
 
 <template name="task">
 
-    <li>
-        <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
-
-        {{data}}
-
-    </li>
+        <div class="top-div"></div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <input type="radio" checked="{{checked}}" class="toggle-checked" name="foo"/>
+              <span class="band-title">{{data}}</span>
+            </h3>
+          </div>
+          <div class="panel-body">
+            <table class="band-list">
+              {{#each bandas}}
+                <tr>
+                  {{this}}
+                </tr>
+              {{/each}}
+            </table>
+          </div>
+        </div>
 </template>
