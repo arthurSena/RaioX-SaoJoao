@@ -15,7 +15,6 @@
 body {
   font-family: sans-serif;
   background-attachment: fixed;
-  background:url("http://cr.i.uol.com.br/brindes/papeis/festajunina_1024x768.jpg");
 
   position: absolute;
   top: 0;
@@ -133,4 +132,19 @@ header .hide-completed {
   .new-task input {
     padding-bottom: 5px;
   }
+}
+
+body {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.browser text {
+    text-anchor: end;
 }
