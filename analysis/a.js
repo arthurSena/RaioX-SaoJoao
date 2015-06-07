@@ -9,14 +9,18 @@ if (Meteor.isClient) {
     // This code only runs on the client
   Template.body.helpers({
     tasks: function () {
-      return Datas.find({});
+      //return Datas.find_one({},{sort: {data: 1}}).fetch();
+        return Datas.find({data:'06/06/15'}).fetch();
     }
   });
 
   Template.task.events({
 
     "click .toggle-checked": function () {
-        var csv = []
+
+
+
+         var csv = []
         var ola = Medias.find({},{sort: {data: 1}}).fetch();
 
         var array_medias = _.pluck(ola,'media_tags');
@@ -26,101 +30,78 @@ if (Meteor.isClient) {
         var tags = _.uniq(_.flatten(keys));
 
         _.each(ola, function(dia) {
-            var zeros =_.map(this.tags,function(tag){
-                return 0;
-            });
+            var csvInicial =_.map(this.tags,function(tag){
+                return {"date":this.data,"count":0,"model":tag};
+            },dia);
 
-            var object = _.object(tags,zeros)
-            object['date'] = dia.data;
 
             var pares = _.pairs(dia.media_tags);
             var data = dia.data;
             _.each(pares,function(tag){
-              this[tag[0]] = tag[1]*100;
-            },object);
+               var objetoCerto = _.findWhere(this, {model: tag[0]});
+                var index = _.indexOf(this,objetoCerto);
+                this[index].count = tag[1];
+                var a = 1;
+              //  return {"date":this.data,"price":tag[1],"symbol":tag[0]};
+            },csvInicial);
 
 
-            this.csv.push(object);
+            this.csv.push(csvInicial);
         }, {'tags':tags,'csv':csv});
 
-
-
-        var data = csv;
-
+        var data = _.flatten(csv,true);
 
 
 
-        var margin = {top: 20, right: 20, bottom: 30, left: 50},
+
+
+        data.forEach(function(d){
+            d.count = (+d.count) * 100;
+            var spllited = d.date.split("/")
+            spllited[2] = "20".concat(spllited[2])
+            var newDate = new Date(spllited[2], spllited[1] - 1, spllited[0]);
+
+            d.date = Date.parse(newDate);
+        });
+
+        var nest = d3.nest()
+            .key(function(d) {return d.model;})
+            .rollup(function(v) {return v.map(function(d) {return [d.date ,d.count];})})
+            .entries(data)
+
+
+
+
+        var margin = {top: 20, right: 20, bottom: 30, left: 40},
             width = 960 - margin.left - margin.right,
             height = 500 - margin.top - margin.bottom;
 
-        var parseDate = d3.time.format("%d/%m/%y").parse,
-            formatPercent = d3.format(".0%");
-
-        var x = d3.time.scale()
+        var x = d3.scale.linear()
             .range([0, width]);
 
-        var y = d3.scale.linear()
-            .range([height, 0]);
-
-        var color = d3.scale.category20();
+        var y = d3.scale.ordinal()
+            .rangeRoundBands([height, 0],.1);
 
         var xAxis = d3.svg.axis()
             .scale(x)
-            .orient("bottom");
+            .orient("bottom")
+            .ticks(10, "%");
 
         var yAxis = d3.svg.axis()
             .scale(y)
             .orient("left")
-            .tickFormat(formatPercent);
 
-        var area = d3.svg.area()
-            .x(function(d) { return x(d.date); })
-            .y0(function(d) { return y(d.y0); })
-            .y1(function(d) { return y(d.y0 + d.y); });
 
-        var stack = d3.layout.stack()
-            .values(function(d) { return d.values; });
-
-        var svg = d3.select("#loucura").append("svg")
+        var svg = d3.select("body").append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-            color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
+        d3.tsv("data.tsv", type, function(error, data) {
 
-            data.forEach(function(d) {
-                d.date = parseDate(d.date);
-            });
-
-            var browsers = stack(color.domain().map(function(name) {
-                return {
-                    name: name,
-                    values: data.map(function(d) {
-                        return {date: d.date, y: d[name] / 100};
-                    })
-                };
-            }));
-
-            x.domain(d3.extent(data, function(d) { return d.date; }));
-
-            var browser = svg.selectAll(".browser")
-                .data(browsers)
-                .enter().append("g")
-                .attr("class", "browser");
-
-            browser.append("path")
-                .attr("class", "area")
-                .attr("d", function(d) { return area(d.values); })
-                .style("fill", function(d) { return color(d.name); });
-
-            browser.append("text")
-                .datum(function(d) { return {name: d.name, value: d.values[d.values.length - 1]}; })
-                .attr("transform", function(d) { return "translate(" + x(d.value.date) + "," + y(d.value.y0 + d.value.y / 2) + ")"; })
-                .attr("x", -6)
-                .attr("dy", ".35em")
-                .text(function(d) { return d.name; });
+            x.domain([0, d3.max(data, function(d) { return d.frequency; })]);
+            y.domain(data.map(function(d) { return d.letter; }));
 
             svg.append("g")
                 .attr("class", "x axis")
@@ -131,9 +112,21 @@ if (Meteor.isClient) {
                 .attr("class", "y axis")
                 .call(yAxis);
 
+            svg.selectAll(".bar")
+                .data(data)
+                .enter().append("rect")
+                .attr("class", "bar")
+                .attr("x", function(d) { return 0; })
+                .attr("width",function(d){ return x(d.frequency);})
+                .attr("y", function(d) { return y(d.letter); })
+                .attr("height", function(d) { return y.rangeBand(); });
 
+        });
 
-
+        function type(d) {
+            d.frequency = +d.frequency;
+            return d;
+        }
 
 
 

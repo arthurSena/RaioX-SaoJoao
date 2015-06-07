@@ -1,18 +1,20 @@
 from pymongo import MongoClient
+from datetime import datetime
+
 import json, codecs
 
 
 #var d = new MongoInternals.RemoteCollectionDriver("mongodb://andryw:4n4lytics@ds033607.mongolab.com:33607/raiox-sj");
 #Bandas = new Mongo.Collection("banda_tag", { _driver: d });
-uri = "mongodb://andryw:4n4lytics@ds033607.mongolab.com:33607/raiox-sj"
-client = MongoClient(uri)
+# uri = "mongodb://andryw:4n4lytics@ds033607.mongolab.com:33607/raiox-sj"
+# client = MongoClient(uri)
 #client = MongoClient('ds033607.mongolab.com', 33607)
-db = client['raiox-sj']
+# db = client['raiox-sj']
 #prog = db.bandas
 ##################CRIAR COLECAO, SE NAO EXISTER
 # db.create_collection("media_dias")
-collections = db["media_dias"]
-#bandas2.remove({})
+# collections = db["media_dias"]
+# collections.remove({})
 #print bandas2.find_one()
 #print db.collection_names(include_system_collections=False)
 def calculateMedia(tagsDia,totalDia):
@@ -31,14 +33,18 @@ def saveDiasPorTags():
             if tag in data['media_tags']:
                 jsonTag["datas"].append(data)
         print jsonTag
-        collections.insert_one(jsonTag)
+        # collections.insert_one(jsonTag)
         listaJsonsTags.append(jsonTag)
 
 def sort_date(date_list):
-    temp = date_list[5:len(date_list)-1]
-    for i in date_list[0:4]:
-        temp.append(i)
-    return temp
+    temp = []
+    for i in date_list:
+        temp.append(datetime.strptime(str(i), '%d/%m/%y').date())
+    temp.sort()
+    retorno = []
+    for i in temp:
+        retorno.append(i.strftime('%d/%m/%y'))
+    return retorno
 
 datas = []
 uniqueTags = set()
@@ -67,9 +73,10 @@ with codecs.open('tudo.json', encoding='utf-8-sig') as data_file:
         print dataLegal
         datas.append(dataLegal)
         ############################################## PARA INSERIR DESCOMENTAR ESSA LINHA
-        collections.insert_one(dataLegal)
+        # collections.insert_one(dataLegal)
 
-
+    media_tagsJson = codecs.open('media_tags.json', "w",encoding='utf-8-sig')
+    json.dump(datas,media_tagsJson, encoding='utf-8-sig')
 
 
 # saveDiasPorTags()

@@ -647,3 +647,46 @@ if (Meteor.isServer) {
   });
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var csv = []
+        var ola = Medias.find({},{sort: {data: 1}}).fetch();
+
+        var array_medias = _.pluck(ola,'media_tags');
+        var keys = _.map(array_medias,function(objeto){
+            return _.keys(objeto);
+        })
+        var tags = _.uniq(_.flatten(keys));
+
+        _.each(ola, function(dia) {
+            var zeros =_.map(this.tags,function(tag){
+                return 0;
+            });
+
+            var object = _.object(tags,zeros)
+            object['date'] = dia.data;
+
+            var pares = _.pairs(dia.media_tags);
+            var data = dia.data;
+            _.each(pares,function(tag){
+              this[tag[0]] = tag[1]*100;
+            },object);
+
+
+            this.csv.push(object);
+        }, {'tags':tags,'csv':csv});
+
+
+
+        var data = csv;

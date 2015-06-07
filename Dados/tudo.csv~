@@ -75,8 +75,10 @@ data,banda,tag,value
 20/06/15,Eliane,romântico,10
 20/06/15,Genival Lacerda,pé-de-serra,10
 20/06/15,Pinto do Acordeon,pé-de-serra,10
-20/06/15,Saia Justa,eletrônico,10
-21/06/15,Forró da Barka,eletrônico,10
+20/06/15,Saia Justa,
+eletrônico,10
+21/06/15,Forró da Barka,
+eletrônico,10
 21/06/15,Joverlaine e Mania de Sertanejo,forronejo,10
 21/06/15,Maciel Melo,romântico,8
 21/06/15,Maciel Melo,pé-de-serra,10
@@ -95,7 +97,7 @@ data,banda,tag,value
 24/06/15,Chico Sales,NA,NA
 24/06/15,Mara Pavanelly,forronejo ,7
 24/06/15,Mara Pavanelly,romântico ,7
-24/06/15,Mara Pavanelly,eletrônico,9
+24/06/15,Mara Pavanelly,forró eletrônico ,9
 24/06/15,Zé Ramalho,NA,NA
 25/06/15,Banda Magia,das antigas,7
 25/06/15,Netinho Lima,NA,NA
@@ -112,11 +114,11 @@ data,banda,tag,value
 27/06/15,João Lima,NA,NA
 27/06/15,Renata Arruda,NA,NA
 27/06/15,Shilton Fernandes,NA,NA
-28/06/15,Forró Sacaneado,eletrônico,10
+28/06/15,Forró Sacaneado,forró eletrônico ,10
 28/06/15,Niedson Lua,pé-de-serra,7
 28/06/15,Niedson Lua,romântico ,10
 28/06/15,Solteirões do Forró,forronejo ,5
-28/06/15,Solteirões do Forró,eletrônico,10
+28/06/15,Solteirões do Forró,forró eletrônico ,10
 29/06/15,Forró Quente,NA,NA
 29/06/15,Forrozão das Antigas,romântico ,7
 29/06/15,Forrozão das Antigas,das antigas,10
@@ -144,4 +146,4 @@ data,banda,tag,value
 05/07/15,Forró na Manha,eletrônico,10
 05/07/15,Garota Safada,forronejo ,5
 05/07/15,Garota Safada,eletrônico,10
-05/07/15,Raiane Stthefanny,eletrônico,10
+05/07/15,Raiane Stthefanny,forró eletrônico ,10

@@ -134,17 +134,19 @@ header .hide-completed {
   }
 }
 
-body {
-    font: 10px sans-serif;
-}
 
-.axis path,
-.axis line {
-    fill: none;
-    stroke: #000;
-    shape-rendering: crispEdges;
-}
 
-.browser text {
-    text-anchor: end;
+
+
+
+
+
+svg {
+    display: block;
+}
+html, body, svg {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
 }
